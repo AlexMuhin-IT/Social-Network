@@ -1,0 +1,9 @@
+
+.footer__wrapper {
+    grid-area: f;
+    background-color: #250909;
+    align-items: center;
+    color: white;
+    display: flex;
+    justify-content: center;
+}

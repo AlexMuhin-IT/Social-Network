@@ -1,0 +1,12 @@
+.nav__wrapper {
+    grid-area: n;
+    background-color: #bb7935;
+
+    li {
+        list-style: none;
+    }
+}
+.item a{
+    color: white;
+    text-decoration: none;
+}

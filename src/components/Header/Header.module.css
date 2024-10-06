@@ -1,0 +1,10 @@
+
+.header__wrapper {
+    grid-area: h;
+    background-color: rgba(123, 255, 0, 0.6);
+}
+
+
+header img {
+    width: 50px;
+}
