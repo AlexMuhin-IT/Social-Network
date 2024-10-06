@@ -11,8 +11,8 @@ export const MyPosts = () => {
                 <button>Add post</button>
                 <button>Remove</button>
             </div>
-            <Post/>
-            <Post/>
+            <Post message='Hi, how are you?' />
+            <Post message='Who are you?' />
         </div>
 
     )
