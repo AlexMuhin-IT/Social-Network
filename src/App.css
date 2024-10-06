@@ -16,3 +16,7 @@
   "n c"
   "f f"
 }
+.app-wrapper-content{
+        grid-area: c;
+        background-color: #309fe8;
+}

@@ -1,5 +1,6 @@
 import React from "react";
 import s from './Navbar.module.css'
+// import {News} from "../News/News";
 
 
 
@@ -10,19 +11,19 @@ export const Navbar = () => {
         <nav className={s.nav__wrapper}>
             <ul>
                 <li className={s.item}>
-                    <a href={"#"}>Profile</a>
+                    <a href='/profile'>Profile</a>
                 </li>
                 <li className={s.item}>
-                    <a href={"#"}>Messages</a>
+                    <a href='/dialogs'>Messages</a>
                 </li>
                 <li className={s.item}>
-                    <a href={"#"}>News</a>
+                    <a href='/news'>News</a>
                 </li>
                 <li className={s.item}>
-                    <a href={"#"}>Music</a>
+                    <a href='/music'>Music</a>
                 </li>
                 <li className={s.item}>
-                    <a href={"#"}>Settings</a>
+                    <a href='/settings'>Settings</a>
                 </li>
             </ul>
         </nav>
