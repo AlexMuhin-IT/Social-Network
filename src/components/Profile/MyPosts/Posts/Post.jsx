@@ -4,9 +4,7 @@ import React from "react";
 
 export const Post = () => {
 
-    return (
-        <div>
-            <Post/>
-        </div>
-    )
+    return <div>
+        Hello, I am a Post!
+    </div>
 }

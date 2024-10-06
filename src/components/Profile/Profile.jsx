@@ -1,6 +1,8 @@
 import React from "react";
 import s from './Profile.module.css'
 import {MyPosts} from "./MyPosts/MyPosts";
+import backgroundImg from '../images/travel-banner1.webp'
+
 
 
 export const Profile = () => {
@@ -9,7 +11,9 @@ export const Profile = () => {
         <div className={s.content__wrapper}>
             <div>
                 <img className={s.background}
-                    src={'https://www.balmerlawrie.com/img/main_images/inside_banner/travel-banner1.jpg'}/>
+                    src={backgroundImg}
+                    alt="Travel Banner"
+                />
             </div>
             <div>
                 <div>
