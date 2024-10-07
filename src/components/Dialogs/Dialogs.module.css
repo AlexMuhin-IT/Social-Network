@@ -1,9 +1,16 @@
 .dialogs{
-
+display: grid;
+    grid-template-columns:2fr 10fr;
 }
 .dialog{
 
 }
-.dialog_user{
+.dialogUser{
+
+}
+.messages{
+
+}
+.message{
 
 }
