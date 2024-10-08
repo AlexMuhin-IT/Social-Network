@@ -1,16 +1,21 @@
-.dialogs{
-display: grid;
+.dialogs {
+    display: grid;
     grid-template-columns:2fr 10fr;
 }
-.dialog{
+
+.dialog {
 
 }
-.dialogUser{
+
+.dialogUser {
+padding: 10px;
 
 }
-.messages{
 
+.messages {
+padding: 10px;
 }
-.message{
+
+.message {
 
 }
