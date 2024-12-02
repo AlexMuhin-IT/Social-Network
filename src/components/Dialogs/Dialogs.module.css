@@ -7,11 +7,13 @@
 
 }
 
-.dialogUser {
+.dialogUser a{
 padding: 10px;
-
+text-decoration: none;
 }
-
+.dialogUser a .active{
+    color: gold;
+}
 .messages {
 padding: 10px;
 }
