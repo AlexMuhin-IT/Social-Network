@@ -1,47 +1,39 @@
 import React from 'react';
 import s from './Dialogs.module.css';
-import {NavLink, Outlet} from "react-router-dom";
-
-const DialogItem = (props) => {
-    const path = '/dialogs/' + props.id
-    return (
-        <div className={s.dialogUser + ' ' + s.active}>
-            <NavLink to={path}>{props.name}</NavLink>
-        </div>
-
-    )
-}
-const Message = (props) => {
-    return <div className={s.message}>{props.message}</div>
-}
+import {DialogItem} from "./Dialog/DialogItem";
+import {Message} from "./Messages/Messages";
+import {ProfileInfo} from "../Profile/ProfileInfo/ProfileInfo";
 
 export const Dialogs = (props) => {
-    const Users = [
-        {id: 1, name: 'Limon'},
-        {id: 2, name: 'Dimon'},
-        {id: 3, name: 'Andron'},
-        {id: 4, name: 'Pokimon'},
-        {id: 5, name: 'BolesheMon'},
-    ]
-    const Messages = [
-        {id: 1, message: 'Hi how are you'},
-        {id: 2, message: 'Hi, it"s okey'},
-        {id: 3, message: 'Very good!!'},
-        {id: 4, message: 'YO'},
-    ]
+    let newPostElement = React.createRef()
+
+
+    const addDialog = () => {
+        let text = newPostElement.current.value;
+        alert(`написали этот текст: ${ text }`)
+    }
+    const removePost = () => {
+        alert("Add Post");
+    }
     return (
         <div className={s.dialogs}>
             <div className={s.dialog}>
-                {Users.map(u => (
-                    <DialogItem name={u.name} id={u.id} key={u.id} />
+                {props.state.users.map(u => (
+                    <div>
+                        {/*<ProfileInfo user={u.img}/>*/}
+                        <DialogItem user={u.img} name={u.name} id={u.id} key={u.id}/>
+                    </div>
                 ))}
 
             </div>
             <div className={s.messages}>
-                {Messages.map(m => (
-                    <Message message={m.message} key={m.id} />
+                {props.state.messages.map(m => (
+                    <Message message={m.message} key={m.id}/>
                 ))}
-
+            </div>
+            <div>
+                <textarea ref={newPostElement}></textarea>
+                <button onClick={addDialog}>Add post</button>
             </div>
         </div>
     )
