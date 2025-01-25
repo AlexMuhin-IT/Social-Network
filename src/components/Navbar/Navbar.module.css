@@ -12,6 +12,27 @@
 }
 .item {
     color: white;
+
+}
+.item_container{
+    display: flex;
+    gap: 20px;
+    /*flex-direction: column;*/
+}
+.item_avatar{
+    width: 30px;        /* Ширина кружка */
+    height: 30px;       /* Высота кружка */
+    background-color: yellow; /* Цвет фона */
+    border-radius: 50%;  /* Радиус границы для создания круга */
+    display: flex;       /* Используем flexbox для центрирования содержимого */
+    align-items: center; /* Вертикальное центрирование */
+    justify-content: center; /* Горизонтальное центрирование */
+    font-size: 24px;    /* Размер шрифта (если нужно добавить текст) */
+    color: black;        /* Цвет текста (если нужно добавить текст) */
+}
+
+.item_name{
+color: white;
 }
 
 .active{
