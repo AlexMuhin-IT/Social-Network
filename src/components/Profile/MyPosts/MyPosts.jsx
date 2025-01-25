@@ -2,20 +2,28 @@ import React from "react";
 import {Post} from "./Posts/Post";
 
 
-export const MyPosts = () => {
-const Posts = [
-    {id: 1, message: 'Hi, how are you?'},
-    {id: 2, message: 'Who are you?'},
-]
+export const MyPosts = (props) => {
+
+    let newPostElement = React.createRef()
+
+
+    const addPost = () => {
+        let text = newPostElement.current.value;
+        // alert(`написали этот текст: ${ text }`)
+        props.addPost(text);
+    }
+    const removePost = () => {
+        alert("Add Post");
+    }
     return (
         <div>
             <div>
-            <textarea></textarea>
-                <button>Add post</button>
-                <button>Remove</button>
+                <textarea ref={newPostElement}></textarea>
+                <button onClick={addPost}>Add post</button>
+                <button onClick={removePost}>Remove</button>
             </div>
-            {Posts.map((p) => (
-                <Post message={p.message} key={p.id} />
+            {props.posts.map((p) => (
+                <Post message={p.message} key={p.id}/>
             ))}
         </div>
 
